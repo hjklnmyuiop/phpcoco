@@ -1,0 +1,37 @@
+<html>
+<head>
+    <!-- The default, built-in template supports the Twitter Bootstrap pagination styles. -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+</head>
+<body>
+
+<ul class="pagination">
+    {% if paginator.getPrevUrl() %}
+    <li><a href="{{paginator.getPrevUrl()}}">&laquo; Previous</a></li>
+    {% endif %}
+
+    {% for page in paginator.getPages() %}
+    {% if paginator.getPageUrl(page.num) %}
+    <li>
+    <a href="{{ paginator.getPageUrl(page.num) }}">{{ page.num }}</a>
+    </li>
+    {% else %}
+    <li class="disabled"><span>{{ page.num }}</span></li>
+    {% endif %}
+    {% endfor %}
+
+    {% if paginator.getNextUrl() %}
+    <li><a href="{{paginator.getNextUrl()}}">Next &raquo;</a></li>
+    {% endif %}
+</ul>
+
+<p>
+    {{ paginator.getTotalItems }}found.
+    Showing
+    {{ paginator.getCurrentPageFirstItem }}
+    -
+    {{ paginator.getCurrentPageLastItem }}
+</p>
+
+</body>
+</html>
