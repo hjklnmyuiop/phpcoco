@@ -1,0 +1,16 @@
+{
+    "name": "dev_guo/kuanjia",
+    "autoload": {
+        "psr-4": {
+            "controllers\\": "app/controllers/",
+            "models\\": "app/models/"
+        },
+        "files": ["app/helpers.php"]
+    },
+    "require": {
+        "noahbuscher/macaw": "dev-master",
+        "twig/twig": "^2.12",
+        "catfan/medoo": "^2.1",
+        "jasongrimes/paginator": "~1.0"
+    }
+}
