@@ -7,6 +7,8 @@
 视图  "twig/twig": "^2.12",
 模型  "catfan/medoo": "^2.1",
 分页应用库  "jasongrimes/paginator": "~1.0"
+文件图片上传 "brandonsavage/Upload"
+图片水印  "Intervention/image"
 ```
 
 2.配置
